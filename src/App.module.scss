@@ -1,0 +1,138 @@
+$maxWidth: 1250px;
+
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 16px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.announcement {
+  display: flex;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #f7e1d2;
+  background-color: #0c3a23;
+  padding: 12px 0;
+  line-height: 1.25rem;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    border-bottom: 1px solid #f7e1d2;
+    color: #f7e1d2;
+    text-decoration: none;
+
+    &:hover {
+      color: #edbc4f;
+      border-color: #edbc4f;
+    }
+  }
+}
+
+header {
+  position: sticky;
+  z-index: 10;
+  top: 0px;
+  max-width: $maxWidth;
+  width: 100%;
+  background-color: #f7e1d2;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 24px;
+
+    .logo {
+      margin-right: 8px;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 8px;
+
+    li {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+    }
+  }
+
+  .button {
+    background-color: #0c3a23;
+    border: 1px solid #0c3a23;
+    color: #fffcfa;
+    padding: 12px 24px;
+    border-radius: 68px;
+    text-decoration: none;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 80px 0;
+  gap: 24px;
+
+  h1 {
+    font-style: medium;
+    line-height: 8rem;
+    span {
+      font-style: italic;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+footer {
+  margin-top: 200px;
+}
+
+.spotlight {
+  border-top: 1px solid #bfc1b9;
+  max-width: $maxWidth;
+  width: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .body {
+  }
+}
