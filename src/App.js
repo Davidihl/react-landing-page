@@ -163,7 +163,7 @@ export default function App() {
               <div>Customer Success</div>
             </label>
             <label>
-              <input className={styles.checkbox} type="checkbox" />
+              <input type="checkbox" />
               <img src={spotlight01} />
               <div>Customer Success</div>
             </label>
@@ -178,6 +178,7 @@ export default function App() {
               <div>Customer Success</div>
             </label>
           </div>
+          <div className={styles.hint}>Select a solution to get started.</div>
         </section>
       </div>
       <footer>my footer</footer>
