@@ -1,4 +1,5 @@
 import styles from './App.module.scss';
+import spotlight01 from './assets/spotlight01.webp';
 
 export default function App() {
   return (
@@ -131,15 +132,51 @@ export default function App() {
         </section>
         <section className={styles.spotlight}>
           <div className={styles.header}>
-            <div>links</div>
-            <div>rechts</div>
+            <div className={styles.headline}>
+              <h2>Which outsourcing solutions are you looking for?</h2>
+              <div>Choose as many as you need.</div>
+            </div>
+            <a href="/#">
+              <div>Get started</div>
+              <div className={styles.icon}>
+                <svg
+                  fill="#ee4b4a"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16"
+                  viewBox="0 96 960 960"
+                  width="16"
+                >
+                  <path d="m560 816-56-58 142-142H160v-80h486L504 394l56-58 240 240-240 240Z" />
+                </svg>
+              </div>
+            </a>
           </div>
           <div className={styles.body}>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
+            <label>
+              <input type="checkbox" />
+              <img src={spotlight01} />
+              <div>Customer Success</div>
+            </label>
+            <label>
+              <input type="checkbox" />
+              <img src={spotlight01} />
+              <div>Customer Success</div>
+            </label>
+            <label>
+              <input className={styles.checkbox} type="checkbox" />
+              <img src={spotlight01} />
+              <div>Customer Success</div>
+            </label>
+            <label>
+              <input type="checkbox" />
+              <img src={spotlight01} />
+              <div>Customer Success</div>
+            </label>
+            <label>
+              <input type="checkbox" />
+              <img src={spotlight01} />
+              <div>Customer Success</div>
+            </label>
           </div>
         </section>
       </div>

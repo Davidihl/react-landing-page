@@ -1,11 +1,13 @@
-$maxWidth: 1250px;
+$maxWidth: 1920px;
+$serif: 'Nanum Myeongjo', serif;
+$sanserif: 'Comme', sans-serif;
 
 .container {
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
-  margin: 0 16px;
+  margin: 0 7%;
 }
 
 .wrap {
@@ -74,6 +76,7 @@ header {
       display: flex;
       align-items: center;
       font-weight: 700;
+      font-size: 1rem;
     }
   }
 
@@ -109,13 +112,13 @@ section {
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 7.75rem;
 }
 
 footer {
@@ -131,8 +134,98 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding-top: 64px;
+    margin-bottom: 44px;
+
+    .headline {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    h2 {
+      font-family: $sanserif;
+      font-size: 1.5rem;
+      line-height: 1.625;
+      font-weight: 400;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: $serif;
+      text-decoration: none;
+      color: #fffcfa;
+      background-color: #ee4b4a;
+      padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+      font-size: 1.5rem;
+      gap: 16px;
+      border-radius: 2.5rem;
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #fffcfa;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      .iconColor {
+        color: #ee4b4a;
+      }
+    }
   }
 
   .body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: center;
+      background-color: rgba(255, 252, 250, 0.5);
+      transition: all;
+      transition-duration: 0.25s;
+      position: relative;
+      padding: 24px;
+      border-radius: 16px;
+
+      &:hover {
+        box-shadow: -1px 1px 2px 0 rgb(0 0 0 / 14%),
+          -3px 3px 6px 0 rgb(0 0 0 / 12%), -6px 6px 12px 0 rgb(0 0 0 / 8%),
+          -15px 15px 30px 0 rgb(0 0 0 / 4%);
+        background-color: #fffcfa;
+      }
+
+      input {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+
+      .checkbox {
+        background-color: transparent;
+        background-image: url(https://assets.website-files.com/64149f7…/64149f7…_Select%20Checkmark.svg);
+        background-size: 0.625rem 0.4375rem;
+        border-color: #2b2c30;
+      }
+
+      img {
+        width: 135px;
+        height: auto;
+      }
+
+      div {
+        margin-top: 18px;
+      }
+    }
   }
 }
