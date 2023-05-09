@@ -2,6 +2,19 @@ $maxWidth: 100%;
 $serif: 'Nanum Myeongjo', serif;
 $sanserif: 'Comme', sans-serif;
 
+.fabButton {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 18px;
+  bottom: 18px;
+  background-color: #141414;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
 .container {
   display: flex;
   position: relative;
@@ -49,6 +62,7 @@ header {
 
   nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -137,10 +151,12 @@ footer {
 
   .header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     padding-top: 64px;
     margin-bottom: 44px;
+    gap: 16px;
 
     .headline {
       display: flex;
@@ -160,6 +176,7 @@ footer {
       align-items: center;
       justify-content: space-between;
       font-family: $serif;
+      font-weight: 700;
       text-decoration: none;
       color: #fffcfa;
       background-color: #ee4b4a;
@@ -207,6 +224,7 @@ footer {
       position: relative;
       padding: 24px;
       border-radius: 16px;
+      font-weight: 700;
 
       &:hover {
         box-shadow: -1px 1px 2px 0 rgb(0 0 0 / 14%),
