@@ -2,6 +2,7 @@ $maxWidth: 100%;
 $serif: 'Nanum Myeongjo', serif;
 $sanserif: 'Comme', sans-serif;
 
+// FAB-Button links unten
 .fabButton {
   position: fixed;
   display: flex;
@@ -15,6 +16,7 @@ $sanserif: 'Comme', sans-serif;
   height: 48px;
 }
 
+// Wrapping content
 .container {
   display: flex;
   position: relative;
@@ -23,12 +25,7 @@ $sanserif: 'Comme', sans-serif;
   margin: 0 7%;
 }
 
-.wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+// Top message
 .announcement {
   display: flex;
   gap: 8px;
@@ -44,6 +41,7 @@ $sanserif: 'Comme', sans-serif;
     border-bottom: 1px solid #f7e1d2;
     color: #f7e1d2;
     text-decoration: none;
+    transition: all 0.25s;
 
     &:hover {
       color: #edbc4f;
@@ -52,6 +50,7 @@ $sanserif: 'Comme', sans-serif;
   }
 }
 
+// Navigation
 header {
   position: sticky;
   z-index: 10;
@@ -59,10 +58,7 @@ header {
   max-width: $maxWidth;
   width: 100%;
 
-  .hidden {
-    display: none;
-  }
-
+  //Navigation
   nav {
     display: flex;
     flex-wrap: wrap;
@@ -71,11 +67,33 @@ header {
     width: 100%;
     padding-top: 24px;
 
+    // Wrapping logo components
+    .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: all 1s;
+    }
+
+    // Spacing the logo components
     .logo {
       margin-right: 8px;
     }
+
+    // Hide part of the logo
+    .hidden {
+      opacity: 0;
+      transition: all 0.2s;
+    }
+
+    // Show part of the logo
+    .notHidden {
+      opacity: 1;
+      transition: all 0.2s;
+    }
   }
 
+  // Centered menu
   .navigation {
     display: flex;
     justify-content: space-between;
@@ -90,6 +108,8 @@ header {
     list-style: none;
     transition: all;
     transition-duration: 0.2s;
+    border: 1px solid rgba(191, 193, 185, 0);
+    border-radius: 200px;
 
     li {
       padding: 18px;
@@ -101,12 +121,15 @@ header {
     }
   }
 
+  // Scroll effect
   .scrollNav {
     background-color: #fffcfa;
-    border-radius: 200px;
     border: 1px solid #bfc1b9;
+    transition: all;
+    transition-duration: 0.2s;
   }
 
+  // Button on the right side
   .button {
     background-color: #0c3a23;
     border: 1px solid #0c3a23;
@@ -117,12 +140,14 @@ header {
   }
 }
 
+//Basic section styling
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+// Hero section
 .hero {
   display: flex;
   flex-direction: column;
@@ -133,6 +158,7 @@ section {
   h1 {
     font-style: medium;
     line-height: 8rem;
+    font-size: 7.75rem;
     span {
       font-style: italic;
     }
@@ -144,14 +170,7 @@ section {
   }
 }
 
-h1 {
-  font-size: 7.75rem;
-}
-
-footer {
-  margin-top: 200px;
-}
-
+// Spotlight section
 .spotlight {
   border-top: 1px solid #bfc1b9;
   max-width: $maxWidth;
@@ -272,4 +291,9 @@ footer {
     border-radius: 0.75rem;
     color: #fffcfa;
   }
+}
+
+// Footer styling
+footer {
+  margin-top: 200px;
 }

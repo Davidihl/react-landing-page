@@ -63,7 +63,7 @@ export default function App() {
                 />
               </svg>
               <svg
-                className={navbar ? styles.hidden : ''}
+                className={navbar ? styles.hidden : styles.notHidden}
                 width="157"
                 height="27"
                 viewBox="0 0 157 27"
