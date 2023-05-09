@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import styles from './App.module.scss';
 import spotlight01 from './assets/spotlight01.webp';
 import spotlight02 from './assets/spotlight02.webp';
@@ -6,6 +7,19 @@ import spotlight04 from './assets/spotlight04.webp';
 import spotlight05 from './assets/spotlight05.webp';
 
 export default function App() {
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 200) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeBackground);
+
   return (
     <>
       <div className={styles.fabButton}>
@@ -49,6 +63,7 @@ export default function App() {
                 />
               </svg>
               <svg
+                className={navbar ? styles.hidden : ''}
                 width="157"
                 height="27"
                 viewBox="0 0 157 27"
@@ -105,7 +120,7 @@ export default function App() {
                 />
               </svg>
             </div>
-            <ul>
+            <ul className={navbar ? styles.scrollNav : ''}>
               <li>
                 Solutions
                 <svg

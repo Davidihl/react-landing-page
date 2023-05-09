@@ -58,7 +58,10 @@ header {
   top: 0px;
   max-width: $maxWidth;
   width: 100%;
-  background-color: #f7e1d2;
+
+  .hidden {
+    display: none;
+  }
 
   nav {
     display: flex;
@@ -82,16 +85,26 @@ header {
   ul {
     display: flex;
     padding: 0;
+    padding-left: 18px;
+    padding-right: 18px;
     list-style: none;
-    gap: 8px;
+    transition: all;
+    transition-duration: 0.2s;
 
     li {
-      padding: 16px;
+      padding: 18px;
       display: flex;
+      justify-content: center;
       align-items: center;
       font-weight: 700;
       font-size: 1rem;
     }
+  }
+
+  .scrollNav {
+    background-color: #fffcfa;
+    border-radius: 200px;
+    border: 1px solid #bfc1b9;
   }
 
   .button {
