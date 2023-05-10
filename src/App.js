@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import styles from './App.module.scss';
 import ref2 from './assets/bm.svg';
+import career from './assets/career.PNG';
+import dreamteam from './assets/dreamteam.webp';
 import elipse from './assets/elipse.svg';
 import ref1 from './assets/flexport.svg';
 import ref3 from './assets/happysocks.svg';
 import ref6 from './assets/madness.svg';
+import people from './assets/people.PNG';
 import ref5 from './assets/redweek.svg';
 import seperatorDark from './assets/sec-border-dark-light.svg';
+import seperatorLight from './assets/sec-border-light-dark.svg';
 import seperatorGray from './assets/sec-border-light-gray.svg';
 import spotlight01 from './assets/spotlight01.webp';
 import spotlight02 from './assets/spotlight02.webp';
@@ -826,6 +830,99 @@ export default function App() {
             <a className={styles.greenButton} href="/#">
               View details
             </a>
+          </div>
+        </section>
+      </div>
+
+      {/* Light section */}
+      <div className={styles.light}>
+        {/* Boxed content */}
+        <div className={styles.container}>
+          <section className={styles.people}>
+            <div className={styles.text}>
+              <h2>
+                Our people are <i>people</i> people
+              </h2>
+              <p>
+                <strong>
+                  For nearly a decade, we have been scaling companies while
+                  fostering the growth, wellbeing, and career development of our
+                  people.
+                </strong>
+              </p>
+              <p>
+                Your dedicated new team members will become experts in your
+                world—your customers, your tech, your data, your systems—so they
+                can expand on what you’ve built.
+              </p>
+              <div className={styles.buttonSpacing}>
+                <a className={styles.button} href="/#">
+                  Read our story
+                </a>
+              </div>
+            </div>
+            <div className={styles.image}>
+              <img alt="woman taking care of plants" src={people} />
+            </div>
+          </section>
+          <section className={styles.career}>
+            <div className={styles.image}>
+              <img alt="woman taking care of plants" src={career} />
+            </div>
+            <div className={styles.text}>
+              <h2>A better way to grow... your career</h2>
+              <p>
+                <strong>
+                  Our passion for growth is fueled by our culture.
+                </strong>
+              </p>
+              <p>
+                Want to join a global team that prioritizes your progress,
+                celebrates your wins, and gives you the opportunity to work with
+                the most interesting clients? Check out our openings today.
+              </p>
+              <div className={styles.buttonSpacing}>
+                <a className={styles.button} href="/#">
+                  View open roles
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <img
+          className={styles.bgSeperator}
+          alt="Seperator"
+          src={seperatorLight}
+        />
+      </div>
+      <div className={styles.container}>
+        <section className={styles.dreamteam}>
+          <div className={styles.text}>
+            <h2>Start building your dream team</h2>
+            <p>
+              Design a custom outsourcing solution that enables you to enjoy
+              ease and ultimate peace of mind. We’ve got you.
+            </p>
+            <div className={styles.buttonSpacing}>
+              <a className={styles.redButton} href="/#">
+                <div>Get started</div>
+                <div className={styles.icon}>
+                  <svg
+                    fill="#ee4b4a"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="16"
+                    viewBox="0 96 960 960"
+                    width="16"
+                  >
+                    <path d="m560 816-56-58 142-142H160v-80h486L504 394l56-58 240 240-240 240Z" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div className={styles.image}>
+            <img alt="Dreamteam" src={dreamteam} />
           </div>
         </section>
       </div>
