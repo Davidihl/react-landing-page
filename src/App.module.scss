@@ -26,6 +26,16 @@ $serifItalic: 'Playfair Display', serif;
   margin: 0 7%;
 }
 
+// Green button
+.button {
+  background-color: #0c3a23;
+  border: 1px solid #0c3a23;
+  color: #fffcfa;
+  padding: 12px 24px;
+  border-radius: 68px;
+  text-decoration: none;
+}
+
 // Top message
 .announcement {
   display: flex;
@@ -129,16 +139,6 @@ header {
     transition: all;
     transition-duration: 0.2s;
   }
-
-  // Button on the right side
-  .button {
-    background-color: #0c3a23;
-    border: 1px solid #0c3a23;
-    color: #fffcfa;
-    padding: 12px 24px;
-    border-radius: 68px;
-    text-decoration: none;
-  }
 }
 
 // Basic section styling
@@ -157,6 +157,7 @@ section {
 .bgSeperator {
   width: 100%;
   object-fit: cover;
+  margin-bottom: -8px;
 }
 
 // Hero section
@@ -320,7 +321,7 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 52px;
   justify-content: space-between;
 
   p {
@@ -358,7 +359,7 @@ section {
     gap: 16px;
 
     h2 {
-      font-size: 3.75rem;
+      font-size: 4.25rem;
     }
 
     p {
@@ -369,13 +370,13 @@ section {
 
   .image {
     flex: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 
   img {
     width: 100%;
     height: auto;
-    max-width: 560px;
-    min-width: 480px;
   }
 }
 
@@ -421,6 +422,10 @@ section {
 }
 
 // USP Section
+.uspSection {
+  padding: 0 15%;
+}
+
 .uspGrid {
   width: 100%;
   display: grid;
@@ -473,6 +478,11 @@ section {
 }
 
 .quotes {
+  width: 100%;
+  padding: 0 15%;
+}
+
+.quotesBody {
   background-color: #f7e1d2;
   width: 100%;
   margin-bottom: 136px;
@@ -495,8 +505,9 @@ section {
   .quoteTitle {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
-    padding-bottom: 40px;
+    padding-bottom: 64px;
 
     h2 {
       font-family: $sanserif;
@@ -570,6 +581,160 @@ section {
       display: flex;
       gap: 24px;
     }
+  }
+}
+
+.gray {
+  background-color: #bfc1b9;
+}
+
+.talent {
+  position: relative;
+
+  .elipse {
+    object-fit: cover;
+    display: block;
+  }
+
+  .talentBody {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 40rem;
+    gap: 24px;
+
+    h2 {
+      font-size: 4rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      padding-bottom: 16px;
+    }
+  }
+}
+
+.fiveSteps {
+  padding-top: 144px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0 7%;
+  gap: 10rem;
+
+  a {
+    width: 100%;
+  }
+
+  .leftside {
+    flex: 1;
+    padding-left: 64px;
+    padding-right: 64px;
+
+    h2 {
+      font-size: 4.25rem;
+      line-height: 4.75rem;
+      letter-spacing: -0.25rem;
+      font-weight: bold;
+      padding-bottom: 24px;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  .rightside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 1.5rem;
+      font-family: $sanserif;
+      padding-bottom: 24px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-bottom: 32px;
+    }
+
+    .leftButton {
+      background-color: #fffcfa;
+      box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.07),
+        -2px 2px 4px rgba(0, 0, 0, 0.07), -1px 1px 2px rgba(0, 0, 0, 0.07);
+      padding: 12px 24px;
+      border-radius: 24px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .rightButton {
+      background-color: #ccccc6;
+      padding: 12px 24px;
+      border-radius: 24px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .greenButton {
+      background-color: #0c3a23;
+      border: 1px solid #0c3a23;
+      color: #fffcfa;
+      padding: 12px 24px;
+      border-radius: 68px;
+      text-decoration: none;
+      width: 100%;
+      text-align: center;
+      margin-top: 44px;
+    }
+  }
+
+  .step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+  }
+  .circle {
+    width: 44px;
+    height: 44px;
+    background-color: #fffcfa;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    z-index: 10;
+  }
+
+  .connector {
+    width: 1px;
+    background-color: #fffcfa;
+    flex: none;
+    position: absolute;
+    top: 1rem;
+    bottom: -2rem;
+    left: 22px;
+    right: auto;
+    z-index: 1;
   }
 }
 
