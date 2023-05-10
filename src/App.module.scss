@@ -140,11 +140,22 @@ header {
   }
 }
 
-//Basic section styling
+// Basic section styling
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+// Light section styling addition
+.light {
+  background-color: white;
+}
+
+// Wraps color seperator
+.bgSeperator {
+  width: 100%;
+  object-fit: cover;
 }
 
 // Hero section
@@ -297,9 +308,38 @@ section {
   }
 }
 
+.references {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  width: 100%;
+  background-color: #bfc1b9;
+  border-radius: 12px;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-between;
+
+  p {
+    font-size: 1.75rem;
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: no-wrap;
+    gap: 32px;
+    flex-grow: 2;
+
+    img {
+      max-width: 100px;
+    }
+  }
+}
+
 // Footer styling
 footer {
-  margin-top: 200px;
+  // margin-top: 200px;
   background-color: #bfc1b9;
   padding-top: 80px;
   padding-bottom: 30px;
