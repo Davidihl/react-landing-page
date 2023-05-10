@@ -52,11 +52,11 @@ $sanserif: 'Comme', sans-serif;
 
 // Navigation
 header {
+  margin: 0 7%;
   position: sticky;
   z-index: 10;
   top: 0px;
   max-width: $maxWidth;
-  width: 100%;
 
   //Navigation
   nav {
@@ -159,6 +159,7 @@ section {
     font-style: medium;
     line-height: 8rem;
     font-size: 7.75rem;
+    letter-spacing: -0.25rem;
     span {
       font-style: italic;
     }
@@ -203,7 +204,8 @@ section {
       font-weight: 400;
     }
 
-    a {
+    // Red button with icon
+    .button {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -282,7 +284,9 @@ section {
     }
   }
 
+  // Only shown on a condition
   .hint {
+    display: none;
     background-color: #2b2c30;
     width: 100%;
     margin-top: 16px;
@@ -296,4 +300,103 @@ section {
 // Footer styling
 footer {
   margin-top: 200px;
+  background-color: #bfc1b9;
+  padding-top: 80px;
+  padding-bottom: 30px;
+
+  .doormatHeader {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .doormatBody {
+    border-top: 1px solid #a1a39c;
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    .menu {
+      flex: 1;
+
+      h2 {
+        font-family: $sanserif;
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+        color: #2b2c30;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        list-style: none;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 0.9rem;
+        color: #58595c;
+        font-weight: 500;
+
+        &:hover {
+          color: #2b2c30;
+        }
+      }
+    }
+
+    .button {
+      min-width: 20vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: $serif;
+      font-weight: 700;
+      text-decoration: none;
+      color: #fffcfa;
+      background-color: #ee4b4a;
+      padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+      font-size: 1.5rem;
+      gap: 16px;
+      border-radius: 2.5rem;
+
+      &:hover {
+        background-color: #2b2c30;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #fffcfa;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #58595c;
+
+    ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: #58595c;
+      font-weight: 500;
+    }
+  }
 }
